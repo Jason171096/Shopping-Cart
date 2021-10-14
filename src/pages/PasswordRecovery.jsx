@@ -1,9 +1,9 @@
-import React from "react";
-import "../styles/RecoveryPassword.scss";
+import React from 'react';
+import '../styles/PasswordRecovery.scss';
 
-const RecoveryPassword = () => {
-  return (
-    <div className="PasswordRecovery">
+const PasswordRecovery = () => {
+	return (
+		<div className="PasswordRecovery">
 			<div className="PasswordRecovery-container">
 				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
 				<h1 className="title">Password recovery</h1>
@@ -15,7 +15,7 @@ const RecoveryPassword = () => {
 				</form>
 			</div>
 		</div>
-  );
-};
+	);
+}
 
-export { RecoveryPassword };
+export default PasswordRecovery;
