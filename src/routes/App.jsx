@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Layout from '@containers/Layout';
+import {AppContext} from '@hooks/AppContext'
+import {useInitialState} from '@hooks/useInitialState'
 import Home from '@pages/Home';
 import Login from '@pages/Login';
 import PasswordRecovery from '@pages/PasswordRecovery';
@@ -13,7 +15,9 @@ import NotFound from '@pages/NotFound';
 import '@styles/global.scss';
 
 const App = () => {
+	const initialState = useInitialState()
 	return (
+		<AppContext.Provider value={initialState}>
 		<BrowserRouter>
 			<Layout>
 				<Switch>
@@ -29,6 +33,7 @@ const App = () => {
 				</Switch>
 			</Layout>
 		</BrowserRouter>
+		</AppContext.Provider>
 	);
 }
 
