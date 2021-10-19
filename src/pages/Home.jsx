@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductList from '@containers/ProductList';
+import {ProductList} from '@containers/ProductList';
 
 const Home = () => {
 	return (
@@ -9,4 +9,4 @@ const Home = () => {
 	);
 }
 
-export default Home;
+export {Home};

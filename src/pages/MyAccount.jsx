@@ -22,4 +22,4 @@ const MyAccount = () => {
 	);
 }
 
-export default MyAccount;
+export {MyAccount};

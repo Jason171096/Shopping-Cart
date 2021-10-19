@@ -23,4 +23,4 @@ const SendEmail = () => {
 	);
 }
 
-export default SendEmail;
+export {SendEmail};

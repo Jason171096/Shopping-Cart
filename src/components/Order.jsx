@@ -15,4 +15,4 @@ const Order = () => {
 	);
 }
 
-export default Order;
+export {Order};

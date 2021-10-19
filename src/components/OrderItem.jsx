@@ -1,10 +1,11 @@
 import React, {useContext} from 'react';
-import {AppContext} from '@hooks/AppContext'
 import '@styles/OrderItem.scss';
 import iconClose from '@icon/icon_close.png'
+import {AppContext} from '@hooks/AppContext'
 
 const OrderItem = ({product}) => {
 	const {removeFromCart} = useContext(AppContext)
+
 	return (
 		<div className="OrderItem">
 			<figure>
@@ -17,4 +18,4 @@ const OrderItem = ({product}) => {
 	);
 }
 
-export default OrderItem;
+export {OrderItem};

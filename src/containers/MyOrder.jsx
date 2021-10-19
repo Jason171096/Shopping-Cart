@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import {AppContext} from '@hooks/AppContext'
-import OrderItem from '@components/OrderItem';
+import {OrderItem} from '@components/OrderItem';
 import '@styles/MyOrder.scss';
 import iconFlechita from '@icon/flechita.svg'
 
-const MyOrder = () => {
+const MyOrder = ({setToggleMyOrder}) => {
 	const { state: {cart} } = useContext(AppContext)
 	const sumTotal = () => {
 		const reducer = (accumalator, currentValue) => accumalator + currentValue.price
@@ -14,7 +14,7 @@ const MyOrder = () => {
 	return (
 		<aside className="MyOrder">
 			<div className="title-container">
-				<img src={iconFlechita} alt="arrow" />
+				<img src={iconFlechita} alt="arrow" onClick={() => setToggleMyOrder(false)}/>
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">

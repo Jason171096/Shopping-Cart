@@ -18,4 +18,4 @@ const PasswordRecovery = () => {
 	);
 }
 
-export default PasswordRecovery;
+export {PasswordRecovery};

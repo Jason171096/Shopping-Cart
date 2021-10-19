@@ -1,6 +1,7 @@
 
 .MyOrder {
 	width: 360px;
+	height: 94vh;
 	padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
@@ -10,6 +11,7 @@
 	bottom: 0;
 	border-radius: 5px;
 	border: 1px solid var(--very-light-pink);
+	overflow-y: auto;
 }
 .title-container {
 	display: flex;
@@ -17,11 +19,17 @@
 .title-container img {
 	transform: rotate(180deg);
 	margin-right: 14px;
+	cursor: pointer;
 }
 .title {
 	font-size: var(--lg);
 	font-weight: bold;
 }
+
+.my-order-content {
+	overflow: inherit;
+}
+
 .order {
 	display: grid;
 	grid-template-columns: auto 1fr;

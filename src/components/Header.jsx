@@ -40,7 +40,7 @@ const Header = () => {
 			<div className="navbar-right">
 				<ul>
 					<li className="navbar-email" onClick={() => setToggle(!toggle)}>
-						platzi@example.com
+						bboyace10@gmail.com
 					</li>
 					<li className="navbar-shopping-cart">
 						<img 
@@ -52,9 +52,9 @@ const Header = () => {
 				</ul>
 			</div>
 			{toggle && <Menu/>}
-			{toggleMyOrder && <MyOrder/>}
+			{toggleMyOrder && <MyOrder setToggleMyOrder={setToggleMyOrder}/>}
 		</nav>
 	);
 }
 
-export default Header;
+export {Header};

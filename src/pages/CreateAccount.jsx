@@ -22,4 +22,4 @@ const CreateAccount = () => {
 	);
 }
 
-export default CreateAccount;
+export {CreateAccount};
