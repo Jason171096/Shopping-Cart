@@ -70,6 +70,7 @@ nav {
 @media (max-width: 640px) {
 	.menu {
 		display: block;
+		cursor: pointer;
 	}
 	.navbar-left ul {
 		display: none;
