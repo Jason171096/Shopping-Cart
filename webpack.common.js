@@ -2,14 +2,13 @@ const path = require("path");
 const HtmlwebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = {
+ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/',
   },
-  mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
@@ -60,7 +59,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
+   plugins: [
     new HtmlwebpackPlugin({
       template: "./public/index.html",
       filename: "./index.html",
@@ -68,12 +67,5 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
-  ],
-  devServer: {
-    static: path.join(__dirname, "dist"),
-    historyApiFallback: true,
-    compress: true,
-    port: 3001,
-    open: true,
-  },
-};
+   ]
+ };
